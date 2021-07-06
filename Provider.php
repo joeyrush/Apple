@@ -147,7 +147,7 @@ class Provider extends AbstractProvider
             $constraints = [
                 new SignedWith(new Sha256(), InMemory::plainText($publicKey['key'])),
                 new IssuedBy(self::URL),
-                new ValidAt(SystemClock::fromSystemTimezone()),
+                // new ValidAt(SystemClock::fromSystemTimezone()),
             ];
 
             try {
